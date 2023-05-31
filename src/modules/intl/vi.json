@@ -1,0 +1,12 @@
+{
+  "welcome": "Xin chào",
+  "email": "Địa chỉ Email",
+  "password": "Mật khẩu",
+  "rememberMe": "Lưu thông tin đăng nhập",
+  "emailRequire": "Vui lòng nhập địa chỉ email",
+  "emailInvalid": "Địa chỉ email không hợp lệ",
+  "passwordRequire": "Vui lòng nhập mật khẩu",
+  "minPasswordInvalid": "Mật khẩu tối thiểu 4 ký tự",
+  "maxPasswordInvalid": "Mật khẩu tối đa 16 ký tự",
+  "register": "Đăng nhập"
+}

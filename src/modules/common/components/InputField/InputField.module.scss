@@ -1,0 +1,21 @@
+input {
+    width: 100%;
+    height: 46px;
+    padding: 11px 12px;
+    border-radius: 6px;
+    background: #F1F3F5;
+    border: none;
+    outline: none;
+}
+
+.input-field {
+    position: relative;
+
+    .eye-icon {
+        position: absolute;
+        right: 8px;
+        top: 20px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+}

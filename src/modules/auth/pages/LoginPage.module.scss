@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    flex-direction: column;
+    background-color: rgb(248, 249, 250);
+
+
+    .headerWithLogo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 36px;
+            font-style: normal;
+            line-height: 119.7%;
+        }
+    }
+
+    .forgot-password {
+        font-weight: 400;
+        color: rgb(0, 145, 255);
+        font-size: 14px;
+        font-style: bold;
+        border: none;
+        background-color: unset;
+        cursor: pointer;
+
+    }
+
+
+}
