@@ -4,22 +4,19 @@ import { Input } from 'antd';
 import * as Yup from 'yup';
 import { ErrorMessage, FastField, Form, Formik, useFormik } from 'formik';
 import className from 'classnames/bind';
-import { Button, notification } from 'antd';
+import { notification } from 'antd';
 
 import { ILoginParams, ILoginValidation } from '../../../../models/auth';
 import { validateLogin, validLogin } from '../../utils';
 import styles from './LoginForm.module.scss';
 import InputField from '../../../common/components/InputField/InputField';
 import SelectField from '../../../common/components/SelectField/SelectField';
-import { values } from 'lodash';
-import axios from 'axios';
-import apiClient from '../../../../configs/axios';
-import { RESPONSE_STATUS_NOTFOUND } from '../../../../utils/httpResponseCode';
-import { Eye, EyeSlash } from '../../../common/components/Icons';
+import Button from '../../../common/components/Button/Button';
 interface Props {
   onLogin(values: ILoginParams): void;
   loading: boolean;
   errorMessage: string;
+  changeForm(): void;
 }
 const FACTORY_OPTIONS = [
   {
@@ -35,7 +32,7 @@ type NotificationType = 'success' | 'info' | 'warning' | 'error';
 
 const cx = className.bind(styles);
 const LoginForm = (props: Props) => {
-  const { onLogin, loading, errorMessage } = props;
+  const { onLogin, loading, errorMessage, changeForm } = props;
   const [isShowPassWord, setShowPassWord] = useState(false);
   const [validate, setValidate] = React.useState<ILoginValidation>();
   const [api, contextHolder] = notification.useNotification();
@@ -95,11 +92,11 @@ const LoginForm = (props: Props) => {
             <label htmlFor="factory">Factory</label>
             <FastField name="company_id" component={SelectField} options={FACTORY_OPTIONS} />
           </div>
-          <button type="submit" className={cx('sign-in')}>
-            Sign In
-          </button>
+          <Button type="submit" className={cx('sign-in')} name="Sign In"></Button>
           <a href="/">
-            <button className={cx('forgot-password')}>Forgot Your Password</button>
+            <button className={cx('forgot-password')} onClick={changeForm}>
+              Forgot Your Password
+            </button>
           </a>
         </Form>
       </Formik>

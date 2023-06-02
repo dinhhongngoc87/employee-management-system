@@ -7,6 +7,7 @@ const HomePage = lazy(() => import('./modules/home/pages/HomePage'));
 const ContactPage = lazy(() => import('./modules/home/pages/ContactPage'));
 const LoginPage = lazy(() => import('./modules/auth/pages/LoginPage'));
 const DetailPage = lazy(() => import('./modules/home/pages/Detail/DetailPage'));
+const ChangePasswordPage = lazy(() => import('./modules/auth/pages/ChangePassword/ChangePasswordPage'));
 
 export const Routes = () => {
   const location = useLocation();
@@ -19,7 +20,8 @@ export const Routes = () => {
         <ProtectedRoute path={ROUTES.profile} component={DetailPage} />
         <Route path={ROUTES.contact} component={ContactPage} />
         <Route path={`${ROUTES.detail}/:id`} component={DetailPage} />
-        <Route path="/" component={LoginPage} />
+        <Route path={`${ROUTES.changePassword}`} component={ChangePasswordPage} />
+        <Route path="/" component={LoginPage} exact />
       </Switch>
     </Suspense>
   );

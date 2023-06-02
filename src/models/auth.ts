@@ -8,3 +8,11 @@ export interface ILoginValidation {
   username: string;
   password: string;
 }
+
+export interface IChangePassword {
+  newPassword: string;
+  confirmPassword: string
+}
+export interface IValidationEmail {
+  email: string
+}

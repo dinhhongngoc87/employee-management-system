@@ -35,9 +35,6 @@ function App() {
           dispatch(setUserInfo(userInfo));
         }
       });
-      // if (json?.code === RESPONSE_STATUS_SUCCESS) {
-      //   dispatch(setUserInfo({ ...json.data, token: accessToken }));
-      // }
     }
   }, [dispatch, user]);
 

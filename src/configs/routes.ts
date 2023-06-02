@@ -4,4 +4,6 @@ export const ROUTES = {
   login: '/login',
   detail: '/detail-page',
   profile: '/profile',
+  changePassword: '/change-password',
+  forgotPassword: '/forgot-password'
 };

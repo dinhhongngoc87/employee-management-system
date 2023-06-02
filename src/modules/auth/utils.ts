@@ -5,11 +5,9 @@ const validateEmail = (email: string) => {
   if (!email) {
     return 'emailRequire';
   }
-
   if (!validEmailRegex.test(email)) {
     return 'emailInvalid';
   }
-
   return '';
 };
 
@@ -17,11 +15,9 @@ const validatePassword = (password: string) => {
   if (!password) {
     return 'passwordRequire';
   }
-
   if (password.length < 4) {
     return 'minPasswordInvalid';
   }
-
   return '';
 };
 
